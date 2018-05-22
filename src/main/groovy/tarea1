@@ -1,0 +1,34 @@
+def extraeDigito(String cadena){
+    StringBuilder destino=new StringBuilder()
+    cadena.each{
+        char cad=it
+        if(Character.isDigit(cad)){
+            destino.append(cad)
+        }
+    }
+    return destino.toString()
+}
+
+def hacerSplit(String cadena){
+    return cadena.split(",")
+}
+
+def ordenarLista(def lista){
+    return lista.sort()
+}
+
+def ordenarString(String cadena){
+    return cadena.toLowerCase().toCharArray().toList().sort()
+}
+
+def cadena="Hola2mundo35"
+println(extraeDigito(cadena))
+
+def cad="hola,mundo"
+println(hacerSplit(cad))
+
+def lista=[4,3,2,1]
+println(ordenarLista(lista))
+
+def cadenaOrdenarString="hola"
+println(ordenarString(cadenaOrdenarString))
